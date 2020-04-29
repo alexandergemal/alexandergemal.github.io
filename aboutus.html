@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oswego Tower</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+
+<body class="aboutusbody">
+  <aside id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size:50px;padding-top: 0.5vw;">&times;</a>
+    <a href="reservations.html">Reservations</a>
+    <a href="explore.html">Explore</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="index.html" style=font-size:30px;position:absolute;bottom:1vw;margin:0;padding-right:30%;>Back to Home</a>
+  </aside>
+  <span style="font-size:50px;cursor:pointer;margin-left:2vw;margin-top:1.5vw;" onclick="openNav()">&#9776;</span>
+
+  <section class="aboutusinfo">
+    <p class="aboutusad"> Oswego Towers is a world renowned Hotel and spa known for its amazing views,
+    service, and memorable experiences. We not only have 56 floors, but each one of those floors brings
+  something new and exciting to the overall experience. From our multiple spas located on the 10th
+and 55th floor, to the three 5-star restaurants located on the 3rd, 33rd and 56th floor, the the swimming pools and helipads
+located around the the tower. <br><br>Built on the iconic landmar Haystack Rock, with a private bridge
+to boot, Oswego Towers is like nothing else on the Oregon coastline.<br></p>
+<p class="facilitynames">Spa of the Sea</p>
+<p class="facilityfloor">10th floor</p>
+<hr style="height:3px;border-width:0;color:#dbdbdb;background-color:gray;width:100%;margin:0;">
+<p class="facilitynames">View Spa</p>
+<p class="facilityfloor">55th Floor</p>
+<hr style="height:3px;border-width:0;color:#dbdbdb;background-color:gray;width:100%;margin:0;">
+<p class="facilitynames">Surf & Turf Restaurant</p>
+<p class="facilityfloor">3rd Floor</p>
+<hr style="height:3px;border-width:0;color:#dbdbdb;background-color:gray;width:100%;margin:0;">
+<p class="facilitynames"><br>The Wine & Dine</p>
+<p class="facilityfloor">33rd Floor</p>
+<hr style="height:3px;border-width:0;color:#dbdbdb;background-color:gray;width:100%;margin:0;">
+<p class="facilitynames">The Sky Bar</p>
+<p class="facilityfloor">55th Floor</p>
+  </section>
+
+  <section class="googlemaps">
+    <iframe id="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5216.479538137294!2d-123.96956346935428!3d45.88460178656221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5494a4e035d8201b%3A0x8d6303935747e922!2sHaystack%20Rock!5e0!3m2!1sen!2sse!4v1588150678933!5m2!1sen!2sse"
+     width="600" height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </section>
+
+
+  <footer class="aboutusfooter">
+    <section class="kontaktinfo">
+      <p><u><b>Contact Info:</b></u><br>For questions please use:<br>
+        <a class="questionsemail" href="mailto:questions@oswegotowers.com">questions@oswegotowers.com</a><br>
+        <br>For job applications please come in with your CV and a healthy attitude</p>
+    </section>
+
+    <section class="addressfooter">
+      <p> <u><b>Address:</b></u><br>US-101, Cannon Beach, OR 97110, United States<br><br>
+        Drop-In Reservations are allowed! Please bring luggage beforehand as you will be seen to your room immediately. </p>
+
+    </section>
+
+    <section class="footerlogo">
+    </section>
+  </footer>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+</body>

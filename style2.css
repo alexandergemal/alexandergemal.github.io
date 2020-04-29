@@ -1,0 +1,72 @@
+/* for Explore page */
+body{
+  background-color: red;
+}
+
+/* for nav bar */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(17, 17, 17, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 2vw 0vw 3vw 3vw;
+  text-decoration: none;
+  font-size: 4vw;
+  color: #818181;
+  line-height: 2.5vw;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border: hidden;
+}
+
+.closebtn{
+  padding-top: 1vw;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 3vw;}
+}
+
+/* For mobile below */
+
+@media only screen and (max-width: 768px){
+
+  .sidenav a {
+    font-size:calc(15px + 2vw);
+    line-height:calc(30px + 2vw);
+  }
+
+}
+
+/* Max text storlekt */
+
+@media screen and (min-width: 1100px) {
+  .sidenav a {
+    font-size: 35px;
+    margin-bottom: 50px;
+    margin-right: 10px;
+  }
+}
