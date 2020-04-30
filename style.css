@@ -1,0 +1,881 @@
+/* För nav bar */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(17, 17, 17, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 2vw 0vw 3vw 3vw;
+  text-decoration: none;
+  font-size: 4vw;
+  color: #818181;
+  line-height: 2.5vw;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  background-color: #b0a8a7;
+  border-radius: 1.5vw;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border: hidden;
+}
+
+.closebtn{
+  padding-top: 1vw;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 3vw;}
+}
+
+
+
+
+/*  Sida: Hemsida */
+
+.homepagebody{
+  background-image: url(hotel-exterior.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-color: grey;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+  grid-template-rows: 10vw 10vw 20vw 30vw repeat(8, 10vw) 5vw;
+  margin: 0;
+}
+
+.logostartpage{
+  grid-area: 3/3/4/4;
+  background-image: url(hotel-logo.png);
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hotelinfo{
+  grid-area: 5/1/9/6;
+  text-align: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 3vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: inherit;
+}
+
+.acclaimtext{
+  font-weight: 300;
+  color: white;
+  font-size: 2.7vw;
+}
+
+.awardslist{
+  color: white;
+  font-size: 2.7vw;
+  list-style-position: inside;
+  line-height: 1.5em;
+}
+
+
+
+/* Sida: Reservations */
+
+.reservationsbody{
+  display: grid;
+  grid-template-columns: 1fr 1fr 12vw 1fr 1fr;
+  grid-template-rows: 10vw 10vw 5vw 5vw 10vw 5vw 13.5vw 13vw repeat(4, 15vw) 10vw 10vw 5vw;
+  margin: 0;
+  padding: 0;
+  background-image: url(hotel-room1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-attachment: inherit;
+  background-color:#ede9df;
+}
+
+/* boka formulär */
+
+.bookroomcontain{
+  margin-top: 3vw;
+  grid-area: 5/1/8/3;
+  color: white;
+}
+
+.bookroom{
+  background-color: rgba(0, 0, 0, 0.9);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 2.5vw);
+  grid-gap: 0.5vw;
+}
+
+.ResAdvertText{
+  grid-area: 3/1/3/3;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  font-size: 4.5vw;
+  text-align: left;
+  bottom: 1vw;
+}
+
+#roomtype{
+  grid-area: 2/1/4/3;
+  width: 95%;
+  font-size: 1.5vw;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  margin-bottom: 1vw;
+}
+
+#fname{
+  width: 45%;
+  grid-area: 4/1/6/3;
+  font-size: 1.5vw;
+  height: 3.5vw;
+  align-self: center;
+}
+
+#lname{
+  width: 86%;
+  grid-area: 4/2/6/3;
+  font-size: 1.5vw;
+  height: 3.5vw;
+  align-self: center;
+}
+
+.submitbutton{
+  grid-area: 6/1/7/2;
+  height: 2vw;
+  background-color: grey;
+  width: 45%;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5vw;
+  cursor: pointer;
+}
+
+label{
+  font-size: 2vw;
+}
+
+
+/* Slideshow on the "reservations" page */
+
+* {box-sizing:border-box}
+
+.slideshowContainer {
+  grid-area: 9/1/13/7;
+  z-index: 0;
+  position: relative
+}
+
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  padding: 20px;
+  color: white;
+
+  font-weight: bold;
+  font-size: 7vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  position: absolute;
+  z-index: 10;
+  bottom: 45%;
+}
+
+.hotelpics{
+  vertical-align: middle;
+  margin-left: 4vw;
+  max-width: 92%;
+  max-height: 50vw;
+  z-index: 2;
+}
+
+.next {
+  right: 5%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev{
+  left: 5%;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.roomname {
+  color: #f2f2f2;
+  font-size: 3vw;
+  padding: 15px 12px;
+  bottom: 4vw;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-family: 'Karla', sans-serif;
+}
+
+
+.dotsection{
+  position: relative;
+}
+
+.dot {
+  cursor: pointer;
+  height: 1.2vw;
+  width: 1.2vw;
+  margin: 0 2px;
+  margin-top: 2vw;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: black;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* Explore Page */
+
+.explorebody{
+  display: grid;
+  grid-template-columns: 5vw repeat(9, 10vw) 5vw;
+  grid-template-rows: repeat(20, 10vw);
+  background-image: url(oregon-view1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-attachment: inherit;
+  background-color: rgb(255, 253, 215);
+  margin: 0;
+  padding:0;
+}
+
+.exploreintro{
+  grid-area: 3/4/5/9;
+  margin-bottom: 0.5vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: inherit;
+  text-align: center;
+  font-weight: 200;
+  color: white;
+  font-size: 2.3vw;
+  padding: 0vw 3vw;
+}
+
+.exploreCafepic{
+  grid-area: 5/1/9/7;
+  margin: 5vw 0vw;
+  background-image: url(people-cafe.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.exploreCafetext{
+  grid-area: 5/7/9/12;
+  margin: 5vw 0vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #3b3e42;
+  text-align: center;
+  font-size: 2.5vw;
+  padding: 0.3vw 2.5vw;
+  font-family:  'Sen',  sans-serif;
+}
+
+.exploreNaturepic{
+  grid-area: 9/6/12/12;
+  background-image: url(oregon-nature.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.exploreNaturetext{
+  grid-area: 9/1/12/6;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #3b3e42;
+  text-align: center;
+  font-size: 2.7vw;
+  padding: 0.3vw 2.5vw;
+  font-family:  'Sen',  sans-serif;
+}
+
+.exploreTours{
+  grid-area: 14/2/17/5;
+  background-color: grey;
+  background-image: url(explore-tours.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.exploreTransport{
+  grid-area: 14/5/17/8;
+  background-color: grey;
+  background-image: url(limo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.exploreCity{
+  grid-area: 14/8/17/11;
+  background-color: grey;
+  background-image: url(explore-nightlife.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.explorelabel{
+  background-color: rgba(0, 0, 0, 0.6);
+  position: inherit;
+  border-radius: 0.7vw;
+  font-size: 1.3vw;
+  color: White;
+  text-align: center;
+  font-family: 'Sen',  sans-serif;
+  margin-top: 23.5vw;
+}
+
+.infoinreception{
+  grid-area: 17/2/18/11;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-self: center;
+  color: White;
+  text-align: center;
+  font-size: 2vw;
+  font-family: 'Sen',  sans-serif;
+  margin: 2.5vw 0vw;
+}
+
+/* About Us Page */
+
+.aboutusbody{
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(13, 10vw);
+  grid-column-gap: 1.5vw;
+  background-image: url(hotel-exterior.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-color: grey;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.aboutusad{
+  font-size: 1.8vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  column-span: all;
+  text-align: center;
+}
+
+.aboutusinfo{
+  grid-area: 2/1/10/8;
+  margin-left: 3vw;
+  margin-right: 2vw;
+  padding: 2vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: White;
+  border-radius: 2vw;
+  column-count: 3;
+  column-fill: auto;
+  column-gap: 4vw;
+}
+
+.facilitynames{
+  text-decoration: underline;
+  font-size: 2.4vw;
+}
+
+.facilityfloor{
+  color: #e3e3e3;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.googlemaps{
+  grid-area: 4/4/7/8;
+  margin-top: 10vw;
+}
+
+/* Everything below is the footer used on all of the pages */
+
+.homepagefooter{
+  grid-area: 11/1/14/6;
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  font-family:  'Exo 2',  sans-serif;
+}
+
+.reservationfooter{
+  grid-area: 13/1/16/6;
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  font-family:  'Exo 2',  sans-serif;
+}
+
+.explorefooter{
+  display: grid;
+  grid-area: 18/1/21/12;
+  background-color: black;
+  color: white;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  font-family:  'Exo 2',  sans-serif;
+}
+
+.aboutusfooter{
+  grid-area: 11/1/14/8;
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  font-family:  'Exo 2',  sans-serif;
+}
+
+.kontaktinfo{
+  grid-area: 1/1/8/2;
+  background-color: rgba(35, 30, 30, 0.5);
+  line-height: 1.2em;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  overflow: visible;
+  margin: 3vw;
+  font-size: 1.8vw;
+
+}
+
+.addressfooter{
+  grid-area: 1/2/8/3;
+  background-color: rgba(35, 30, 30, 0.5);
+  padding-left: 1.5vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  margin-right: 3vw;
+  font-size: 1.8vw;
+}
+
+.footerlogo{
+  grid-area: 1/3/8/4;
+  background-image: url(hotel-logo.png);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 3vw;
+}
+
+.questionsemail{
+  text-decoration: none;
+  color: White;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+
+/* For mobile below */
+
+@media only screen and (max-width: 768px){
+  .homepagebody{
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(13, 18.7vw);
+    background-position: right;
+  }
+
+  .logostartpage{
+    grid-area: 1/2/5/5;
+    margin-top: 5vw;
+  }
+
+  .hotelinfo{
+    grid-area: 5/1/9/6;
+    margin: 4vw;
+  }
+
+  .acclaimtext{
+    font-size: 4vw;
+  }
+
+  .awardslist{
+    font-size: 4vw;
+    padding-left: 5vw;
+  }
+
+  .homepagefooter{
+    grid-area: 10/1/14/6;
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 10vw 10vw repeat(3, 1fr);
+    grid-column-gap: 3.33vw;
+    grid-row-gap: 2vw;
+  }
+
+  .kontaktinfo{
+    grid-area: 1/1/4/3;
+    margin-left: 3vw;
+    margin-top: 3.33vw;
+    overflow: initial;
+    font-size: 3vw;
+  }
+
+  .addressfooter{
+    grid-area: 4/1/7/3;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-top: 0.1vw;
+    overflow: hidden;
+    font-size: 3vw;
+  }
+
+  .footerlogo{
+    grid-area: 1/3/6/4;
+    margin-top: 3.33vw;
+    margin-bottom: 3.33vw;
+  }
+
+  .sidenav a {
+    font-size:calc(15px + 2vw);
+    line-height:calc(30px + 2vw);
+  }
+
+  .closebtn{
+    font-size: 20px;
+  }
+
+.reservationsbody{
+  background: url(hotel-room1.jpg) no-repeat top right;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-color: grey;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 10vw) 6vw repeat(9, 10vw) repeat(7, 15vw);
+  margin: 0;
+}
+
+.reservationfooter{
+  grid-area: 19/1/24/6;
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  grid-template-rows: repeat(6, 11vw);
+  grid-column-gap: 3.33vw;
+  grid-row-gap: 2vw;
+
+}
+
+.bookroomcontain{
+  grid-area: 8/1/13/7;
+}
+
+.bookroom{
+  grid-template-rows: 3vw repeat(7, 5vw);
+}
+
+.ResAdvertText{
+  grid-area: 2/1/7/3;
+  font-size: 10vw;
+  color: white;
+  padding: 0;
+}
+
+#roomtype{
+  grid-area: 2/1/4/3;
+  font-size: 3vw;
+  margin-left: 1.5vw;
+}
+
+#fname{
+  width: 92.5%;
+  grid-area: 4/1/6/3;
+  font-size: 3vw;
+  align-self: center;
+  height: 70%;
+  margin-left: 1.5vw;
+}
+
+#lname{
+  grid-area: 6/1/8/3;
+  height: 70%;
+  width: 92.5%;
+  font-size: 3vw;
+  margin-left: 1.5vw;
+}
+
+.submitbutton{
+  grid-area: 8/1/9/3;
+  margin: 0;
+  padding: 0;
+  height: 80%;
+}
+
+.slideshowContainer{
+  grid-area: 13/1/18/-1;
+  margin: 0;
+}
+
+.prev, .next{
+  bottom: 20%;
+  padding: 15px;
+}
+
+.dotsection{
+  grid-area: 13/3/14/4;
+}
+
+.dot{
+  height: 3vw;
+  width: 3vw;
+}
+
+.roomname{
+  font-size: 22px;
+  padding: 2px 12px;
+  bottom: 0;
+}
+
+.explorebody{
+  background-image: none;
+  display: grid;
+  grid-template-columns: repeat(10,10vw);
+  grid-template-rows: repeat(45, 10vw) repeat(4,15vw) 7vw;
+  margin: 0;
+}
+
+.Exploremobileimage{
+  grid-area: 2/1/7/11;
+  padding-top: 10vw;
+  background-image: url(oregon-view1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.exploreintro{
+  grid-area: 3/2/7/10;
+  font-size: 4vw;
+  padding: 0vw 4vw;
+  margin-bottom: 8vw;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.exploreCafepic{
+  grid-area: 7/1/13/11;
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+.exploreCafetext{
+  grid-area: 13/1/15/11;
+  font-size: 3vw;
+  margin: 0;
+}
+
+.exploreNaturepic{
+  grid-area: 16/1/20/11;
+}
+
+.exploreNaturetext{
+  grid-area: 20/1/22/11;
+  font-size: 3vw;
+  margin-bottom: 5vw;
+  padding: 0;
+}
+
+.exploreTours{
+  grid-area: 23/3/28/9;
+  margin-bottom: 3vw;
+}
+
+.exploreTransport{
+  grid-area: 30/3/35/9;
+  margin-bottom: 3vw;
+}
+
+.exploreCity{
+  grid-area: 37/3/42/9;
+  margin-bottom: 3vw;
+}
+
+.explorelabel{
+  font-size: 3vw;
+  margin-top: 47vw;
+}
+
+.infoinreception{
+  grid-area: 43/2/45/10;
+  font-size: 3vw;
+  margin: 2vw 0vw;
+}
+
+.explorefooter{
+  grid-area: 45/1/51/11;
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  grid-template-rows: repeat(6, 11vw);
+  grid-column-gap: 3.33vw;
+  grid-row-gap: 2vw;
+}
+
+.aboutusbody{
+  background-position: right;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(20, 10vw) repeat(7, 15vw);
+}
+
+.aboutusad{
+  font-size: 3.3vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  column-span: all;
+  text-align: center;
+}
+
+.aboutusinfo{
+  grid-area: 3/1/14/6;
+  column-count: 2;
+}
+
+.facilitynames{
+  text-decoration: underline;
+  font-size: 3.2vw;
+}
+
+.facilityfloor{
+  color: #e3e3e3;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.googlemaps{
+  grid-area: 14/1/21/6;
+  position: relative;
+  padding-bottom: 70%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+#iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutusfooter{
+  grid-area: 23/1/28/6;
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  grid-template-rows: 10vw 10vw repeat(3, 1fr);
+  grid-column-gap: 3.33vw;
+  grid-row-gap: 2vw;
+}
+
+}
+
+/* Max text storlekt */
+
+@media screen and (min-width: 1100px) {
+  .acclaimtext {
+     font-size: 30px;
+   }
+   .awardslist{
+     font-size: 30px;
+   }
+
+   .sidenav a {
+     font-size: 35px;
+     margin-bottom: 50px;
+     margin-right: 10px;
+   }
+}
