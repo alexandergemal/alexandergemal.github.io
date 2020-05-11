@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"/>
+  <title>Oswego Tower</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="hotel-logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+
+<body class="homepagebody">
+  <aside id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size:50px;padding-top: 0.5vw;">&times;</a>
+    <a href="reservations.html">Reservations</a>
+    <a href="explore.html">Explore</a>
+    <a href="aboutus.html">About Us</a>
+  </aside>
+  <span style="font-size:50px;color:#838587;cursor:pointer;margin-left:2vw;margin-top:1.5vw;" onclick="openNav()">&#9776;</span>
+
+  <section class="logostartpage">
+  </section>
+  <section class="hotelinfo">
+    <p class="acclaimtext">The leading hotel in luxury, confort and fun, the Oswego Tower is the height of Oregon living. Without compromise
+      our staff is dedicated to making your stay as enjoyable as possible, making use of every amenity and tool at our disposal.
+      <br>Check out our awards!<br></p>
+    <ul class="awardslist">
+      <li>   Travel Agent: Best Hotel 2016 Award</li>
+      <li>Luxury Hotel Awards: Most Luxurious 2017</li>
+      <li>World Traveler: Reader Voted Best Hotel 2019</li>
+    </ul>
+    <p style="font-size:2.3vw;color: white;"> Check out The <a href="https://www.luxuryhotelawards.com/" target="_blank" style="font-size:2.3vw;color: white;">Luxury Hotel Awards</a> </p>
+  </section>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+
+      var documentEl = $(document),
+        fadeElem = $('.logostartpage');
+
+
+      documentEl.on('scroll', function() {
+        var currScrollPos = documentEl.scrollTop();
+
+        fadeElem.each(function() {
+          var $this = $(this),
+            elemOffsetTop = $this.offset().top;
+          if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos - elemOffsetTop) / 250);
+        });
+      });
+
+    });
+  </script>
+
+
+  <footer class="homepagefooter">
+    <section class="kontaktinfo">
+      <p><u><b>Contact Info:</b></u><br>For questions please use:<br>
+        <a class="questionsemail" href="mailto:questions@oswegotowers.com">questions@oswegotowers.com</a><br>
+        <br>For job applications please come in with your CV and a healthy attitude</p>
+    </section>
+
+    <section class="addressfooter">
+      <p> <u><b>Address:</b></u><br>US-101, Cannon Beach, OR 97110, United States<br><br>
+        Drop-In Reservations are allowed! Please bring luggage beforehand as you will be seen to your room immediately. </p>
+
+    </section>
+
+    <section class="footerlogo">
+    </section>
+  </footer>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+</body>
+
+
+</html>
